@@ -21,8 +21,6 @@ folder_input2 = os.path.expanduser(f'{args.fasta}')
 folder_input3 = os.path.expanduser(f'{args.txt}')
 folder_output = os.path.expanduser(f'{args.output}') + "resultados_do_script_bacmet.csv"
 
-database_bacmet = pd.read_csv(f'{folder_input}', sep = ';')
-
 # Carrega os arquivos CSV em DataFrames do Pandas
 database_bacmet = pd.read_csv(f'{folder_input}', sep=';')
 database_bacmet_txt = pd.read_csv(f'{folder_input3}', sep='\t')
@@ -112,11 +110,3 @@ df = pd.DataFrame(data)
 
 # Salvar a tabela em um arquivo CSV
 df.to_csv(folder_output, index=False)
-
-
-    
-
-
-
-
-
